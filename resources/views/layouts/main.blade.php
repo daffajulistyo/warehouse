@@ -95,7 +95,7 @@
           <!-- Sidebar Menu -->
 
           @switch(Auth::user()->role)
-              @case('super_admin')
+              @case('admin')
               <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
@@ -379,7 +379,7 @@
                 </ul>
               </nav>
                   @break
-              @case('warehouse')
+              @case('warehouse_staff')
               <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
@@ -530,7 +530,7 @@
                 </ul>
               </nav>
                   @break
-              @case('owner')
+              @case('staff_procurement')
               <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
