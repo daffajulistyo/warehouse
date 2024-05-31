@@ -83,13 +83,13 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header border-transparent">
-                            <?php if(Auth::user()->role == 'super_admin'): ?>
+                            <?php if(Auth::user()->role == 'admin'): ?>
                                 <h3 class="card-title">Welcome <?php echo e(Auth::user()->name); ?></h3>
                             <?php endif; ?>
                         </div>
                         <hr>
                         <div class="card-header border-transparent">
-                            <?php if(Auth::user()->role == 'super_admin'): ?>
+                            <?php if(Auth::user()->role == 'admin'): ?>
                                 <p class="card-title">
                                 <p class="card-text">Pertamina Delivery Service: Pengiriman yang Cepat, Aman, dan Terpercaya
                                     untuk Memenuhi Kebutuhan Energi Anda!
