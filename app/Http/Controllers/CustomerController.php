@@ -18,7 +18,7 @@ class CustomerController extends Controller
         $customers = User::where('role', 'customer')->get();
         return view ('penjualan.pelanggan.pelanggan_index', compact('customers'));
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -51,7 +51,7 @@ class CustomerController extends Controller
             'email'     => $request->email,
             'phone'     => $request->phone,
             'password'  => Hash::make($request->password),
-            'role'      => 'customer',
+            'role'      => 'warehouse_staff',
         ]);
 
         return redirect('/customers')->with('message', 'Data Pelanggan Berhasil Ditambahkan');
@@ -102,7 +102,7 @@ class CustomerController extends Controller
             'email'     => $request->email,
             'phone'     => $request->phone,
         ]);
-        
+
         if ($request->password != NULL) {
             # code...
             $request->validate([
