@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title', 'Data Stok Gudang')
+@section('title', 'Data Stok Material')
 
 @section('breadcrumb')
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -102,7 +102,7 @@
                   <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-            
+
           </div>
           <!-- /.card-body -->
           <div class="card-footer">

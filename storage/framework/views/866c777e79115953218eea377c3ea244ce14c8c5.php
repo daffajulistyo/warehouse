@@ -1,6 +1,6 @@
 
 
-<?php $__env->startSection('title', 'Data Stok Gudang'); ?>
+<?php $__env->startSection('title', 'Data Stok Material'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -107,7 +107,7 @@ unset($__errorArgs, $__bag); ?>
                 </div>
               </div>
               <div class="form-row">
-                
+
                 <div class="col-4">
                   <div class="form-group">
                     <label for="harga_beli">Harga Beli</label>
@@ -186,7 +186,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
               </div>
-            
+
           </div>
           <!-- /.card-body -->
           <div class="card-footer">
@@ -200,7 +200,7 @@ unset($__errorArgs, $__bag); ?>
       </div>
       <div class="col-3">
         <div class="card">
-          
+
           <img class="card-img-top" id="gambar-preview" src="<?php echo e(url('/img/items_img/'.$item->gambar)); ?>" alt="Card image cap">
           <div class="card-body">
             <p class="card-text">Tinjauan Gambar Barang</p>

@@ -1,6 +1,4 @@
-
-
-<?php $__env->startSection('title', 'Data Stok Gudang'); ?>
+<?php $__env->startSection('title', 'Data Stok Material'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -26,7 +24,7 @@
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Daftar Stok Gudang</h3>
+            <h3 class="card-title">Daftar Stok Material</h3>
 
             <a href="<?php echo e(url('/items/create')); ?>" class="btn btn-primary float-right text-white">Tambah Barang</a>
           </div>
@@ -97,4 +95,5 @@
     });
   </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/stok/barang/barang_index.blade.php ENDPATH**/ ?>

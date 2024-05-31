@@ -67,7 +67,7 @@
       <!-- /.navbar -->
 
       <!-- Main Sidebar Container -->
-      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <aside class="main-sidebar sidebar-light-info   elevation-4">
         <!-- Brand Logo -->
         <a href="<?php echo e(url('/')); ?>" class="brand-link">
           <span class="brand-text font-weight-light">Warehaouse PT.X</span>
@@ -84,7 +84,7 @@
               <a href="#" class="d-block"><?php echo e(Auth::user()->name); ?></a>
             </div>
             <div class="info">
-              <a class="btn btn-danger btn-sm" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <a class="btn btn-warning btn-sm" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <?php echo e(__('Logout')); ?>
 
               </a>
@@ -110,67 +110,29 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Material Data
-                      </p>
+                    <a href="<?php echo e(url('/items')); ?>" class="nav-link <?php echo e(request()->is('*items') ? 'active' : ''); ?>">
+                      <i class="nav-icon fas fa-box"></i>
+                      <p>Material Data</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Input Material
-                      </p>
+                    <a href="<?php echo e(url('/items/create')); ?>" class="nav-link <?php echo e(request()->is('*items/create') ? 'active' : ''); ?>">
+                      <i class="nav-icon fas fa-box"></i>
+                      <p>Input Material</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Material Request
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Purchase Requisition
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        User
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-header text-center nav-header-top"><h6 class="bg-secondary nav-header-title">Manajemen Stok</h6></li>
+
                   <li class="nav-item has-treeview <?php echo e((request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'menu-open' : ''); ?>">
                     <a href="#" class="nav-link <?php echo e((request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-box"></i>
                       <p>
-                        Barang
+                        Material
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
                     <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="<?php echo e(url('/items/create')); ?>" class="nav-link <?php echo e(request()->is('*items/create') ? 'active' : ''); ?>">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Tambah Barang</p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="<?php echo e(url('/items')); ?>" class="nav-link <?php echo e(request()->is('*items') ? 'active' : ''); ?>">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Kelola Barang</p>
-                        </a>
-                      </li>
+
+
                       <li class="nav-item">
                         <a href="<?php echo e(url('/items/categories')); ?>" class="nav-link <?php echo e(request()->is('*items/categories') ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
@@ -189,7 +151,7 @@
                     <a href="#" class="nav-link <?php echo e((request()->is('*purchases*')) ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-gifts"></i>
                       <p>
-                        Pembelian Barang
+                        Pembelian Material
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -254,7 +216,6 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-header text-center nav-header-top"><h6 class="bg-secondary nav-header-title">Penjualan</h6></li>
                   <li class="nav-item has-treeview <?php echo e((request()->is('*sales*')) ? 'menu-open' : ''); ?>">
                     <a href="#" class="nav-link <?php echo e((request()->is('*sales*')) ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-shopping-cart"></i>
@@ -301,12 +262,11 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-header text-center nav-header-top"><h6 class="bg-secondary nav-header-title">Manajemen Toko</h6></li>
                   <li class="nav-item has-treeview <?php echo e((request()->is('*employees*')) ? 'menu-open' : ''); ?>">
                     <a href="#" class="nav-link <?php echo e((request()->is('*employees*')) ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-user-tie"></i>
                       <p>
-                        Pegawai
+                        User
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -314,13 +274,13 @@
                       <li class="nav-item">
                         <a href="<?php echo e(url('/employees/create')); ?>" class="nav-link <?php echo e((request()->is('*employees/create')) ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Tambah Pegawai</p>
+                          <p>Tambah User</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="<?php echo e(url('/employees')); ?>" class="nav-link <?php echo e((request()->is('*employees')) ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Kelola Pegawai</p>
+                          <p>Kelola User</p>
                         </a>
                       </li>
                     </ul>
@@ -433,44 +393,13 @@
                       </p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Material Data
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Input Material
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Material Request
-                      </p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?php echo e(url('/')); ?>" class="nav-link <?php echo e((request()->is('*dashboard')) ? 'active' : ''); ?>">
-                      <i class="nav-icon fas fa-home"></i>
-                      <p>
-                        Purchase Requisition
-                      </p>
-                    </a>
-                  </li>
+
                   <li class="nav-header text-center nav-header-top"><h6 class="bg-secondary nav-header-title">Manajemen Stok</h6></li>
                   <li class="nav-item has-treeview <?php echo e((request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'menu-open' : ''); ?>">
                     <a href="#" class="nav-link <?php echo e((request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-box"></i>
                       <p>
-                        Barang
+                        Material
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -478,13 +407,13 @@
                       <li class="nav-item">
                         <a href="<?php echo e(url('/items/create')); ?>" class="nav-link <?php echo e(request()->is('*items/create') ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Tambah Barang</p>
+                          <p>Tambah Material</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="<?php echo e(url('/items')); ?>" class="nav-link <?php echo e(request()->is('*items') ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Kelola Barang</p>
+                          <p>Kelola Material</p>
                         </a>
                       </li>
                       <li class="nav-item">
@@ -505,7 +434,7 @@
                     <a href="#" class="nav-link <?php echo e((request()->is('*purchases*')) ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-gifts"></i>
                       <p>
-                        Pembelian Barang
+                        Pembelian Material
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -620,7 +549,7 @@
                     <a href="#" class="nav-link <?php echo e((request()->is('*employees*')) ? 'active' : ''); ?>">
                       <i class="nav-icon fas fa-user-tie"></i>
                       <p>
-                        Pegawai
+                        User
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -628,18 +557,18 @@
                       <li class="nav-item">
                         <a href="<?php echo e(url('/employees/create')); ?>" class="nav-link <?php echo e((request()->is('*employees/create')) ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Tambah Pegawai</p>
+                          <p>Tambah User</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="<?php echo e(url('/employees')); ?>" class="nav-link <?php echo e((request()->is('*employees')) ? 'active' : ''); ?>">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Kelola Pegawai</p>
+                          <p>Kelola User</p>
                         </a>
                       </li>
                     </ul>
                   </li>
-                  
+
                 </ul>
               </nav>
                   <?php break; ?>
@@ -673,17 +602,7 @@
         <?php echo $__env->yieldContent('content'); ?>
         <!-- /.content -->
       </div>
-      <!-- /.content-wrapper -->
 
-      <footer class="main-footer">
-        <div class="float-right d-none d-sm-block">
-          <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2020 Archie Cakra.</strong> All rights
-        reserved.
-      </footer>
-
-      <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
       </aside>

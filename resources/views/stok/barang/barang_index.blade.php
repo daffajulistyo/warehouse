@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title', 'Data Stok Gudang')
+@section('title', 'Data Stok Material')
 
 @section('breadcrumb')
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -26,7 +26,7 @@
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Daftar Stok Gudang</h3>
+            <h3 class="card-title">Daftar Stok Material</h3>
 
             <a href="{{ url('/items/create') }}" class="btn btn-primary float-right text-white">Tambah Barang</a>
           </div>

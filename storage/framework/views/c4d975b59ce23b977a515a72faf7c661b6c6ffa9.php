@@ -1,6 +1,6 @@
 
 
-<?php $__env->startSection('title', 'Data Stok Gudang'); ?>
+<?php $__env->startSection('title', 'Data Stok Material'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -186,7 +186,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
               </div>
-            
+
           </div>
           <!-- /.card-body -->
           <div class="card-footer">

@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title', 'Data Stok Gudang')
+@section('title', 'Data Stok Material')
 
 @section('breadcrumb')
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>

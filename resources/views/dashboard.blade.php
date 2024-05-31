@@ -86,7 +86,7 @@
                     <div class="card">
                         <div class="card-header border-transparent">
                             @if (Auth::user()->role == 'super_admin')
-                                <h3 class="card-title">Welocme {{ Auth::user()->name }}</h3>
+                                <h3 class="card-title">Welcome {{ Auth::user()->name }}</h3>
                             @endif
                         </div>
                         <hr>

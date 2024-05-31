@@ -84,7 +84,7 @@
                     <div class="card">
                         <div class="card-header border-transparent">
                             <?php if(Auth::user()->role == 'super_admin'): ?>
-                                <h3 class="card-title">Welocme <?php echo e(Auth::user()->name); ?></h3>
+                                <h3 class="card-title">Welcome <?php echo e(Auth::user()->name); ?></h3>
                             <?php endif; ?>
                         </div>
                         <hr>
