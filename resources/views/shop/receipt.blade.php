@@ -13,9 +13,9 @@
   <div class="container-fluid text-sm">
     <div class="row">
       <div class="col text-center">
-        <img src="{{ url('img/sites_img/site_logo.png') }}" alt="Mentari Logo" class="img-fluid" style="max-width: 70%;">
+        <img src="{{ url('img/sites_img/site_logo.png') }}" alt="  Logo" class="img-fluid" style="max-width: 70%;">
         <ul class="list-unstyled">
-          <li class="font-weight-bold">Toko Mentari Grosir</li>
+          <li class="font-weight-bold">Toko   Grosir</li>
           <li>Pasar Paing Stand No. 16</li>
           <li>Jl. Zamhuri No. 31, Rungkut Kidul</li>
         </ul>
@@ -46,7 +46,7 @@
               </tr>
           </thead>
           <tbody class="text-sm">
-            @foreach ($order->items as $item)    
+            @foreach ($order->items as $item)
             <tr>
               <td class="">{{ $item->pivot->jumlah }}</td>
               <td class="">{{ $item->unit->nama }}</td>

@@ -92,7 +92,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
             'name'      => 'required|string|max:255',
-            'role'      => 'required|in:admin,warehouse,owner',
+            'role'      => 'required|in:warehaouse_manager,warehouse_supervisor,warehouse_staff,procurement_manager,staff_procurement,admin',
             'username'  => 'required|string|alpha_num|max:255',
             'email'     => 'required|string|email|max:255',
             'phone'     => 'required|string|numeric|digits_between:9,14',

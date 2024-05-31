@@ -35,18 +35,18 @@
     <div class="row invoice-info">
       <div class="col-sm-6 invoice-col">
         <address>
-          <strong>Toko Mentari Alat Tulis Grosir.</strong><br>
+          <strong>Toko   Warehouse Management System.</strong><br>
           Pasar Paing Stand No.16-17<br>
           Jl. Zamhuri No.31, Rungkut Kidul<br>
           Telepon: (+62) 318-432-447<br>
-          Email: mentarigrosir@gmail.com
+          Email:  grosir@gmail.com
         </address>
       </div>
       <!-- /.col -->
       <div class="col-sm-6 invoice-col">
         {{-- <b>Periode {{ $request->jenis2 }} {{ $request->tanggal2 }}</b><br> --}}
         @switch($request->jenis2)
-        
+
         @case('Harian')
           <b>Periode {{ $request->jenis2 }} {{ $request->tanggal2 }}</b><br>
         @break
@@ -103,7 +103,7 @@
     <div class="row">
       <!-- accepted payments column -->
       <div class="col-6">
-        
+
       </div>
       <!-- /.col -->
       <div class="col-6">
@@ -136,7 +136,7 @@
 <!-- AdminLTE App -->
 <script src="{{ url('/js/adminlte.min.js') }}"></script>
 
-<script type="text/javascript"> 
+<script type="text/javascript">
   // var table = $('#table').DataTable({
   //   // order: [[ 1, "desc" ]]
   // });
@@ -159,7 +159,7 @@
     total += subtotal;
     $('#total_pembelian').text('Rp. '+total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
   });
-  
+
   window.addEventListener("load", window.print());
 </script>
 </body>

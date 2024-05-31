@@ -37,12 +37,12 @@
                                     <label for="role" class="col-sm-3 col-form-label">Role</label>
                                     <div class="col-sm-9">
                                         <select class="form-control select2" name="role" id="role">
-                                            <option value="admin">Warehouse Manager</option>
-                                            <option value="admin">Warehouse Supervisor</option>
-                                            <option value="warehouse">Warehouse Staff</option>
-                                            <option value="warehouse">Procurement Manager</option>
-                                            <option value="warehouse">Staff Procurement</option>
-                                            <option value="owner">Admin</option>
+                                            <option value="warehouse_manager">Warehouse Manager</option>
+                                            <option value="warehouse_supervisor">Warehouse Supervisor</option>
+                                            <option value="warehouse_staff">Warehouse Staff</option>
+                                            <option value="procurement_manager">Procurement Manager</option>
+                                            <option value="procurement_staff">Staff Procurement</option>
+                                            <option value="admin">Admin</option>
                                         </select>
                                         @error('role')
                                             <div class="invalid-feedback">{{ $message }}</div>

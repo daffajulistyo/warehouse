@@ -67,8 +67,8 @@
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="<?php echo e(url('/')); ?>" class="brand-link">
-          <img src="<?php echo e(url('img/sites_img/site_logo.png')); ?>" alt="Mentari Logo" class="brand-image">
-          <span class="brand-text font-weight-light">Mentari Katalog</span>
+          <img src="<?php echo e(url('img/sites_img/site_logo.png')); ?>" alt="  Logo" class="brand-image">
+          <span class="brand-text font-weight-light">  Katalog</span>
         </a>
 
         <!-- Sidebar -->
@@ -155,7 +155,7 @@
   <script type="text/javascript" src="<?php echo e(url('/js/datatables.min.js')); ?>"></script>
   <!-- my custom script -->
   <script>
-    
+
     $('.alert').delay(1000).fadeOut(1000);
     $('.card').hide();
     $('.card').fadeIn(1000);

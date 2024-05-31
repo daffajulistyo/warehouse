@@ -20,7 +20,7 @@
 <body id="background" class="hold-transition register-page" style='background-image: url({{ url("/img/sites_img/login.jpg") }})'>
 <div class="register-box">
   <div class="register-logo">
-    <a href="#" class="text-white display-5"><b>Mentari</b> <br>Alat Tulis Grosir</a>
+    <a href="#" class="text-white display-5"><b> </b> <br>Warehouse Management System</a>
   </div>
 
   <div class="card">

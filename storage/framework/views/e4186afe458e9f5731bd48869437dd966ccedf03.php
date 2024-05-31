@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mentari Grosir</title>
+  <title>  Grosir</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSRF Token -->
@@ -24,8 +24,8 @@
       <?php if($agent->isMobile()): ?>
         <b>Aplikasi Katalog</b> <br>
       <?php endif; ?>
-      <b>Mentari</b> <br>
-      Alat Tulis Grosir
+      <b> </b> <br>
+      Warehouse Management System
     </a>
   </div>
   <!-- /.login-logo -->

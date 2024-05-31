@@ -35,11 +35,11 @@
     <div class="row invoice-info">
       <div class="col-sm-6 invoice-col">
         <address>
-          <strong>Toko Mentari Alat Tulis Grosir.</strong><br>
+          <strong>Toko   Warehouse Management System.</strong><br>
           Pasar Paing Stand No.16-17<br>
           Jl. Zamhuri No.31, Rungkut Kidul<br>
           Telepon: (+62) 318-432-447<br>
-          Email: mentarigrosir@gmail.com
+          Email:  grosir@gmail.com
         </address>
       </div>
       <!-- /.col -->
@@ -73,9 +73,9 @@
           </thead>
           <tbody>
             <?php $__currentLoopData = $sales; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sale): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-              <?php $__currentLoopData = $sale->items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>    
+              <?php $__currentLoopData = $sale->items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr class="item">
-                  <?php if($loop->first): ?> 
+                  <?php if($loop->first): ?>
                     <td class="align-middle" rowspan="<?php echo e($sale->items->count()); ?>"><?php echo e($sale->created_at); ?></td>
                     <td class="align-middle" rowspan="<?php echo e($sale->items->count()); ?>"><?php echo e($sale->kode_transaksi); ?></td>
                     <td class="align-middle text-left" rowspan="<?php echo e($sale->items->count()); ?>"><?php echo e($sale->user->name); ?></td>
@@ -98,7 +98,7 @@
     <div class="row">
       <!-- accepted payments column -->
       <div class="col-6">
-        
+
       </div>
       <!-- /.col -->
       <div class="col-6">
@@ -127,7 +127,7 @@
 <!-- AdminLTE App -->
 <script src="<?php echo e(url('/js/adminlte.min.js')); ?>"></script>
 
-<script type="text/javascript"> 
+<script type="text/javascript">
   var total = 0;
   var total_item = 0;
   $('td.qty').each(function () {
@@ -140,7 +140,7 @@
     total += subtotal;
     $('#total_pembelian').text('Rp. '+total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
   });
-  
+
   window.addEventListener("load", window.print());
 </script>
 </body>

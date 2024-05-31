@@ -35,11 +35,11 @@
     <div class="row invoice-info">
       <div class="col-sm-6 invoice-col">
         <address>
-          <strong>Toko Mentari Alat Tulis Grosir.</strong><br>
+          <strong>Toko   Warehouse Management System.</strong><br>
           Pasar Paing Stand No.16-17<br>
           Jl. Zamhuri No.31, Rungkut Kidul<br>
           Telepon: (+62) 318-432-447<br>
-          Email: mentarigrosir@gmail.com
+          Email:  grosir@gmail.com
         </address>
       </div>
       <!-- /.col -->
@@ -72,9 +72,9 @@
           </thead>
           <tbody>
             @foreach ($purchases as $purchase)
-              @foreach ($purchase->purchaseDetail->items as $item)    
+              @foreach ($purchase->purchaseDetail->items as $item)
                 <tr class="item">
-                  @if ($loop->first) 
+                  @if ($loop->first)
                     <td class="align-middle" rowspan="{{ $purchase->purchaseDetail->items->count() }}">{{ $purchase->created_at }}</td>
                     <td class="align-middle" rowspan="{{ $purchase->purchaseDetail->items->count() }}">{{ $purchase->kode_pembelian }}</td>
                     <td class="align-middle text-left" rowspan="{{ $purchase->purchaseDetail->items->count() }}">{{ $purchase->supplier->nama }}</td>
@@ -99,7 +99,7 @@
     <div class="row">
       <!-- accepted payments column -->
       <div class="col-6">
-        
+
       </div>
       <!-- /.col -->
       <div class="col-6">
@@ -128,7 +128,7 @@
 <!-- AdminLTE App -->
 <script src="{{ url('/js/adminlte.min.js') }}"></script>
 
-<script type="text/javascript"> 
+<script type="text/javascript">
   var total = 0;
   var total_item = $('#table tr').length;
   $('span#total_item').text(total_item-1);
@@ -138,7 +138,7 @@
     total += subtotal;
     $('#total_pembelian').text('Rp. '+total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
   });
-  
+
   window.addEventListener("load", window.print());
 </script>
 </body>

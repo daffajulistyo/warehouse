@@ -35,17 +35,17 @@
     <div class="row invoice-info">
       <div class="col-sm-6 invoice-col">
         <address>
-          <strong>Toko Mentari Alat Tulis Grosir.</strong><br>
+          <strong>Toko   Warehouse Management System.</strong><br>
           Pasar Paing Stand No.16-17<br>
           Jl. Zamhuri No.31, Rungkut Kidul<br>
           Telepon: (+62) 318-432-447<br>
-          Email: mentarigrosir@gmail.com
+          Email:  grosir@gmail.com
         </address>
       </div>
       <!-- /.col -->
       <div class="col-sm-6 invoice-col">
         @switch($request->jenis2)
-        
+
           @case('Harian')
             <b>Periode {{ $request->jenis2 }} {{ $request->tanggal2 }}</b><br>
           @break
@@ -112,7 +112,7 @@
 <!-- AdminLTE App -->
 <script src="{{ url('/js/adminlte.min.js') }}"></script>
 
-<script type="text/javascript"> 
+<script type="text/javascript">
   var total = 0;
   var total_masuk = 0;
   var total_keluar = 0;
@@ -121,12 +121,12 @@
     var masuk = parseInt($(this).text());
     $('td#total-masuk').text(total_masuk+=masuk);
   });
-  
+
   $('td.keluar').each(function () {
     var keluar = parseInt($(this).text());
     $('td#total-keluar').text(total_keluar+=keluar);
   });
-  
+
   $('td.stok').each(function () {
     var stok = parseInt($(this).text());
     $('td#total').text(total+=stok);
