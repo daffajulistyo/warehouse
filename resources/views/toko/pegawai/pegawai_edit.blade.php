@@ -34,9 +34,12 @@
                 <label for="role" class="col-sm-3 col-form-label">Role</label>
                 <div class="col-sm-9">
                   <select class="form-control select2" name="role" id="role">
+                    <option value="warehouse_manager" @if ($user->role == 'warehouse_manager') selected @endif>Warehouse Manager</option>
+                    <option value="warehouse_supervisor" @if ($user->role == 'warehouse_supervisor') selected @endif>Warehouse Supervisor</option>
+                    <option value="warehouse_staff" @if ($user->role == 'warehouse_staff') selected @endif>Warehouse Staff</option>
+                    <option value="procurement_manager" @if ($user->role == 'procurement_manager') selected @endif>Procurement Manager</option>
+                    <option value="procurement_staff" @if ($user->role == 'procurement_staff') selected @endif>Procurement Staff</option>
                     <option value="admin" @if ($user->role == 'admin') selected @endif>Admin</option>
-                    <option value="warehouse" @if ($user->role == 'warehouse') selected @endif>Warehouse</option>
-                    <option value="owner" @if ($user->role == 'owner') selected @endif>Owner</option>
                   </select>
                   @error('role')
                     <div class="invalid-feedback">{{ $message }}</div>

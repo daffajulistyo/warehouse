@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Data Pegawai'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
@@ -34,9 +32,12 @@
                 <label for="role" class="col-sm-3 col-form-label">Role</label>
                 <div class="col-sm-9">
                   <select class="form-control select2" name="role" id="role">
+                    <option value="warehouse_manager" <?php if($user->role == 'warehouse_manager'): ?> selected <?php endif; ?>>Warehouse Manager</option>
+                    <option value="warehouse_supervisor" <?php if($user->role == 'warehouse_supervisor'): ?> selected <?php endif; ?>>Warehouse Supervisor</option>
+                    <option value="warehouse_staff" <?php if($user->role == 'warehouse_staff'): ?> selected <?php endif; ?>>Warehouse Staff</option>
+                    <option value="procurement_manager" <?php if($user->role == 'procurement_manager'): ?> selected <?php endif; ?>>Procurement Manager</option>
+                    <option value="procurement_staff" <?php if($user->role == 'procurement_staff'): ?> selected <?php endif; ?>>Procurement Staff</option>
                     <option value="admin" <?php if($user->role == 'admin'): ?> selected <?php endif; ?>>Admin</option>
-                    <option value="warehouse" <?php if($user->role == 'warehouse'): ?> selected <?php endif; ?>>Warehouse</option>
-                    <option value="owner" <?php if($user->role == 'owner'): ?> selected <?php endif; ?>>Owner</option>
                   </select>
                   <?php $__errorArgs = ['role'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -119,4 +120,5 @@ unset($__errorArgs, $__bag); ?>
 
   </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/toko/pegawai/pegawai_edit.blade.php ENDPATH**/ ?>
