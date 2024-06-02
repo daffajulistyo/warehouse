@@ -16,7 +16,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = User::where('role', '!=', 'customer')->get();
+        $employees = User::where('role', '!=', 'staff_procurement')->get();
         return view ('toko.pegawai.pegawai_index', compact('employees'));
     }
 
@@ -40,7 +40,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
             'name'      => 'required|string|max:255',
-            'role'      => 'required|in:warehaouse_manager,warehouse_supervisor,warehouse_staff,procurement_manager,staff_procurement,admin',
+            'role'      => 'required|in:warehouse_manager,warehouse_staff,procurement_manager,admin',
             'username'  => 'required|string|alpha_num|max:255',
             'email'     => 'required|string|email|max:255',
             'phone'     => 'required|string|numeric|digits_between:9,14',
@@ -55,6 +55,7 @@ class EmployeeController extends Controller
             'phone'     => $request->phone,
             'password'  => Hash::make($request->password)
         ]);
+
 
         return redirect('/employees')->with('message', 'Data Pegawai '.$request->name.' Berhasil Ditambahkan');
     }
@@ -92,7 +93,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
             'name'      => 'required|string|max:255',
-            'role'      => 'required|in:warehaouse_manager,warehouse_supervisor,warehouse_staff,procurement_manager,staff_procurement,admin',
+            'role'      => 'required|in:warehause_manager,warehouse_staff,procurement_manager,admin',
             'username'  => 'required|string|alpha_num|max:255',
             'email'     => 'required|string|email|max:255',
             'phone'     => 'required|string|numeric|digits_between:9,14',

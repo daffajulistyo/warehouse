@@ -12,7 +12,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-9">
+      <div class="col-12">
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
@@ -106,9 +106,9 @@ unset($__errorArgs, $__bag); ?>
                 </div>
               </div>
               <div class="form-row">
-                <div class="col-6">
+                <div class="col-12">
                   <div class="form-group">
-                    <label for="harga_beli">Harga Beli</label>
+                    <label for="harga_beli">Harga Satuan</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas">Rp.</i></span>
@@ -120,7 +120,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" id="harga_beli" name="harga_beli" placeholder="Masukkan Harga Beli Barang" value="<?php echo e(old('harga_beli')); ?>">
+unset($__errorArgs, $__bag); ?>" id="harga_beli" name="harga_beli" placeholder="Masukkan Harga Satuan Barang" value="<?php echo e(old('harga_beli')); ?>">
                       <?php $__errorArgs = ['harga_beli'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -134,55 +134,6 @@ unset($__errorArgs, $__bag); ?>
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="form-group">
-                    <label for="harga_jual">Harga Jual</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas">Rp.</i></span>
-                      </div>
-                      <input type="text" class="form-control form-control-sm <?php $__errorArgs = ['harga_jual'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" id="harga_jual" name="harga_jual" placeholder="Masukkan Harga Jual Barang" value="<?php echo e(old('harga_jual')); ?>">
-                      <?php $__errorArgs = ['harga_jual'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                        <div class="invalid-feedback"><?php echo e($message); ?></div>
-                      <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar Barang</label>
-                <input type="file" class="form-control-file <?php $__errorArgs = ['gambar'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" id="gambar" name="gambar">
-                <?php $__errorArgs = ['gambar'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                  <div class="invalid-feedback"><?php echo e($message); ?></div>
-                <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
               </div>
 
           </div>
@@ -196,14 +147,7 @@ unset($__errorArgs, $__bag); ?>
         </div>
         <!-- /.card -->
       </div>
-      <div class="col-3">
-        <div class="card">
-          <img class="card-img-top" id="gambar-preview" src="https://via.placeholder.com/350?text=Preview+Gambar" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Tinjauan Gambar Barang</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>

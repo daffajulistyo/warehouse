@@ -35,7 +35,7 @@
                     <th class="align-middle" scope="col">Tanggal Mutasi</th>
                     <th class="align-middle" scope="col">Barang</th>
                     <th class="align-middle" scope="col">Jenis Mutasi</th>
-                    <th class="align-middle" scope="col">Stok Awal</th>
+                    <th class="align-middle" scope="col">Spesifikasi</th>
                     <th class="align-middle" scope="col">Mutasi</th>
                     <th class="align-middle" scope="col">Stok Akhir</th>
                     <th class="align-middle" scope="col">Keterangan</th>

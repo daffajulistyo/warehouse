@@ -73,7 +73,7 @@
           <thead>
             <tr>
               <th>Barang</th>
-              <th>Stok Awal</th>
+              <th>Spesifikasi</th>
               <th>Masuk (Pembelian)</th>
               <th>Keluar (Penjualan)</th>
               <th>Stok Akhir</th>

@@ -50,10 +50,8 @@ unset($__errorArgs, $__bag); ?>
                                     <div class="col-sm-9">
                                         <select class="form-control select2" name="role" id="role">
                                             <option value="warehouse_manager">Warehouse Manager</option>
-                                            <option value="warehouse_supervisor">Warehouse Supervisor</option>
                                             <option value="warehouse_staff">Warehouse Staff</option>
                                             <option value="procurement_manager">Procurement Manager</option>
-                                            <option value="procurement_staff">Staff Procurement</option>
                                             <option value="admin">Admin</option>
                                         </select>
                                         <?php $__errorArgs = ['role'];

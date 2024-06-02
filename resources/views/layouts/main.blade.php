@@ -107,19 +107,7 @@
                       </p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="{{ url('/items') }}" class="nav-link {{ request()->is('*items') ? 'active' : ''}}">
-                      <i class="nav-icon fas fa-box"></i>
-                      <p>Material Data</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="{{ url('/items/create') }}" class="nav-link {{ request()->is('*items/create') ? 'active' : ''}}">
-                      <i class="nav-icon fas fa-box"></i>
-                      <p>Input Material</p>
-                    </a>
-                  </li>
-
+                  {{-- <li class="nav-header text-center nav-header-top"><h6 class="bg-secondary nav-header-title">Manajemen Stok</h6></li> --}}
                   <li class="nav-item has-treeview {{ (request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{ (request()->is('*items*') && request()->segment(2) != 'purchases' && request()->segment(2) != 'mutations') ? 'active' : ''}}">
                       <i class="nav-icon fas fa-box"></i>
@@ -129,8 +117,18 @@
                       </p>
                     </a>
                     <ul class="nav nav-treeview">
-
-
+                      <li class="nav-item">
+                        <a href="{{ url('/items/create') }}" class="nav-link {{ request()->is('*items/create') ? 'active' : ''}}">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Tambah Material</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ url('/items') }}" class="nav-link {{ request()->is('*items') ? 'active' : ''}}">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Kelola Material</p>
+                        </a>
+                      </li>
                       <li class="nav-item">
                         <a href="{{ url('/items/categories') }}" class="nav-link {{ request()->is('*items/categories') ? 'active' : ''}}">
                           <i class="far fa-circle nav-icon"></i>
@@ -149,7 +147,7 @@
                     <a href="#" class="nav-link {{ (request()->is('*purchases*')) ? 'active' : ''}}">
                       <i class="nav-icon fas fa-gifts"></i>
                       <p>
-                        Pembelian Material
+                         Purchase Requisition
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -205,6 +203,7 @@
                           <i class="far fa-circle nav-icon"></i>
                           <p>Tambah Supplier</p>
                         </a>
+                        
                       </li>
                       <li class="nav-item">
                         <a href="{{ url('/suppliers') }}" class="nav-link {{ (request()->is('*suppliers')) ? 'active' : ''}}">
@@ -432,7 +431,7 @@
                     <a href="#" class="nav-link {{ (request()->is('*purchases*')) ? 'active' : ''}}">
                       <i class="nav-icon fas fa-gifts"></i>
                       <p>
-                        Pembelian Material
+                         Purchase Requisition
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -570,6 +569,29 @@
                       </li>
                     </ul>
                   </li>
+                  <li class="nav-item has-treeview {{ (request()->is('*mutations*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('*mutations*')) ? 'active' : ''}}">
+                      <i class="nav-icon fas fa-history"></i>
+                      <p>
+                        Mutasi Stok
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{ url('/items/mutations/create') }}" class="nav-link {{ request()->is('*items/mutations/create') ? 'active' : ''}}">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Tambah Mutasi Stok</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ url('/items/mutations') }}" class="nav-link {{ request()->is('*items/mutations') ? 'active' : ''}}">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Kelola Mutasi</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
 
                 </ul>
               </nav>
@@ -658,7 +680,7 @@
                     <a href="#" class="nav-link {{ (request()->is('*purchases*')) ? 'active' : ''}}">
                       <i class="nav-icon fas fa-gifts"></i>
                       <p>
-                        Pembelian Material
+                         Purchase Requisition
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>

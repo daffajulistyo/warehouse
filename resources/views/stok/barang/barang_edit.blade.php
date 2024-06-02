@@ -14,7 +14,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-9">
+      <div class="col-12">
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
@@ -74,7 +74,7 @@
                     @enderror
                   </div>
                 </div> --}}
-                <div class="col-4">
+                <div class="col-12">
                   <div class="form-group">
                     <label for="harga_beli">Harga Beli</label>
                     <div class="input-group">
@@ -88,27 +88,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="form-group">
-                    <label for="harga_jual">Harga Jual</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas">Rp.</i></span>
-                      </div>
-                      <input type="text" class="form-control form-control-sm @error('harga_jual') is-invalid @enderror" id="harga_jual" name="harga_jual" placeholder="50000" value="{{ $item->harga_jual }}">
-                      @error('harga_jual')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                      @enderror
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar Barang</label>
-                <input type="file" class="form-control-file @error('gambar') is-invalid @enderror" id="gambar" name="gambar">
-                @error('gambar')
-                  <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+
               </div>
 
           </div>
@@ -122,15 +102,7 @@
         </div>
         <!-- /.card -->
       </div>
-      <div class="col-3">
-        <div class="card">
-          {{-- <img class="card-img-top" src="{{ url('/'.$item->gambar) }}" alt="Card image cap"> --}}
-          <img class="card-img-top" id="gambar-preview" src="{{ url('/img/items_img/'.$item->gambar) }}" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Tinjauan Gambar Barang</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>

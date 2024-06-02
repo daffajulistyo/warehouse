@@ -62,7 +62,7 @@
             <tr>
               <th>Tanggal</th>
               <th>Barang</th>
-              <th>Stok Awal</th>
+              <th>Spesifikasi</th>
               <th>Masuk (Beli)</th>
               <th>Out (Jual)</th>
               <th>Stok Akhir</th>

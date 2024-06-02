@@ -20,9 +20,7 @@ class CreateItemsTable extends Migration
             $table->foreignId('category_id')->nullable();
             $table->foreignId('unit_id')->nullable();
             $table->integer('harga_beli');
-            $table->integer('harga_jual');
             $table->integer('stok');
-            $table->string('gambar');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');

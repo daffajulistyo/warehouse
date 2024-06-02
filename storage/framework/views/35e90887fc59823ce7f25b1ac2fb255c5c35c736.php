@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Mutasi Stok Barang'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
@@ -35,7 +33,7 @@
                     <th class="align-middle" scope="col">Tanggal Mutasi</th>
                     <th class="align-middle" scope="col">Barang</th>
                     <th class="align-middle" scope="col">Jenis Mutasi</th>
-                    <th class="align-middle" scope="col">Stok Awal</th>
+                    <th class="align-middle" scope="col">Spesifikasi</th>
                     <th class="align-middle" scope="col">Mutasi</th>
                     <th class="align-middle" scope="col">Stok Akhir</th>
                     <th class="align-middle" scope="col">Keterangan</th>
@@ -81,4 +79,5 @@
     });
   </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/stok/mutasi/mutasi_index.blade.php ENDPATH**/ ?>

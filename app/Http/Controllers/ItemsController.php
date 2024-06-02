@@ -50,21 +50,16 @@ class ItemsController extends Controller
             'nama' => 'required',
             'category_id' => 'required|numeric',
             'unit_id' => 'required|numeric',
-            'harga_jual' => 'required|numeric',
             'harga_beli' => 'required|numeric',
-            'gambar' => 'required|image'
         ]);
 
-        $namaGambar = $request->nama.'.'.$request->gambar->extension();
 
         $item = Item::create([
             'nama' => $request->nama,
             'category_id' => $request->category_id,
             'unit_id' => $request->unit_id,
-            'harga_jual' => $request->harga_jual,
             'harga_beli' => $request->harga_beli,
             'stok' => 0,
-            'gambar' => $request->gambar->store('','items_img')
         ]);
 
         StockMutation::create([
@@ -112,22 +107,15 @@ class ItemsController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        if ($request->hasFile('gambar')) {
-            $namaGambar = $request->nama.'.'.$request->gambar->extension();
-            $gambar = $request->gambar->store('','items_img');
-        } else {
-            $gambar = $item->gambar;
-        }
+
 
         Item::where('id', $item->id)
             ->update([
                 'nama' => $request->nama,
                 'category_id' => $request->category_id,
                 'unit_id' => $request->unit_id,
-                'harga_jual' => $request->harga_jual,
                 'harga_beli' => $request->harga_beli,
                 'stok' => $item->stok,
-                'gambar' => $gambar
             ]);
         return redirect('/items')->with('message', 'Data Barang Berhasil Diubah');
     }

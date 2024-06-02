@@ -34,13 +34,12 @@
                 <thead class="thead-dark">
                   <tr>
                     <th class="align-middle" scope="col">#</th>
-                    <th class="align-middle" scope="col">Nama Barang</th>
+                    <th class="align-middle" scope="col">Material</th>
                     <th class="align-middle" scope="col">Kategori</th>
-                    <th class="align-middle" scope="col">Harga Beli</th>
-                    <th class="align-middle" scope="col">Harga Jual</th>
+                    <th class="align-middle" scope="col">Harga Satuan</th>
+
                     <th class="align-middle" scope="col">Stok</th>
                     <th class="align-middle" scope="col">Satuan</th>
-                    <th class="align-middle" scope="col" style="width: 15%;">Gambar</th>
                     <th class="align-middle" scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -55,14 +54,14 @@
                       <td class="align-middle"><?php echo e($item->category->nama); ?></td>
                     <?php endif; ?>
                     <td class="align-middle text-nowrap">Rp. <?php echo e(number_format($item->harga_beli, 2)); ?></td>
-                    <td class="align-middle text-nowrap">Rp. <?php echo e(number_format($item->harga_jual, 2)); ?></td>
+                    
                     <td class="align-middle"><?php echo e($item->stok); ?></td>
                     <?php if($item->unit_id==NULL): ?>
                       <td class="align-middle">-</td>
                     <?php else: ?>
                       <td class="align-middle"><?php echo e($item->unit->nama); ?></td>
                     <?php endif; ?>
-                    <td class="align-middle"><img src="<?php echo e(url('/img/items_img/'.$item->gambar)); ?>" class="img-thumbnail" alt="<?php echo e($item->nama); ?>"></td>
+
                     <td class="align-middle">
                       <a class="btn btn-primary btn-xs" href="<?php echo e(url('/items/'.$item->id.'/edit')); ?>"><i class="fas fa-md fa-edit"></i></a>
                       <form action="<?php echo e(url('/items/'.$item->id)); ?>" method="POST">

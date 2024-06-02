@@ -108,7 +108,7 @@
                   <select name="item_id" class="form-control select2" name="item_id" id="item_id">
                     <option value="">Semua Barang</option>
                     @foreach ($items as $item)
-                      <option value="{{ $item->id }}" @if ($request->item_id == $item->id) selected @endif>{{ $item->nama }}</option> 
+                      <option value="{{ $item->id }}" @if ($request->item_id == $item->id) selected @endif>{{ $item->nama }}</option>
                     @endforeach
                   </select>
                   </div>
@@ -157,7 +157,7 @@
                     <th class="align-middle" scope="col">Tanggal Mutasi</th>
                     <th class="align-middle" scope="col">Barang</th>
                     <th class="align-middle" scope="col">Jenis Mutasi</th>
-                    <th class="align-middle" scope="col">Stok Awal</th>
+                    <th class="align-middle" scope="col">Spesifikasi</th>
                     <th class="align-middle" scope="col">Mutasi</th>
                     <th class="align-middle" scope="col">Stok Akhir</th>
                     <th class="align-middle" scope="col">Keterangan</th>
@@ -291,7 +291,7 @@
             useCurrent: false
           });
           break
-      
+
         default:
           break;
       }
@@ -337,7 +337,7 @@
             useCurrent: false
           });
           break
-      
+
         default:
           break;
       }

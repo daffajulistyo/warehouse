@@ -1,32 +1,30 @@
-@extends('layouts/main')
+<?php $__env->startSection('title', 'Data Supplier'); ?>
 
-@section('title', 'Data Supplier')
-
-@section('breadcrumb')
+<?php $__env->startSection('breadcrumb'); ?>
 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
 <li class="breadcrumb-item"><a href="#">Data Supplier</a></li>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- Main content -->
 <section class="content">
 
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        @if (session('message'))
+        <?php if(session('message')): ?>
           <div class="alert alert-info alert-dismissible fade show" role="alert">
-            <strong>{{ session('message') }}</strong>
+            <strong><?php echo e(session('message')); ?></strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-        @endif
+        <?php endif; ?>
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
             <h3 class="card-title">Daftar Supplier</h3>
-            <a href="{{ url('/suppliers/create') }}" class="btn btn-primary float-right text-white">Tambah Supplier</a>
+            <a href="<?php echo e(url('/suppliers/create')); ?>" class="btn btn-primary float-right text-white">Tambah Supplier</a>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -62,4 +60,6 @@
   </div>
 </section>
 <!-- /.content -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/stok/supplier/supplier_index.blade.php ENDPATH**/ ?>

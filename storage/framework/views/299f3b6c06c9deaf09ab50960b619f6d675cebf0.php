@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Mutasi Stok Barang'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
@@ -18,13 +16,13 @@
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Koreksi Stok Barang</h3>
+            <h3 class="card-title">Koreksi Stok Kategori</h3>
           </div>
           <form method="POST" action="<?php echo e(url('/items/mutations')); ?>">
             <div class="card-body">
               <?php echo csrf_field(); ?>
               <div class="form-group row">
-                <label for="item_id" class="col-sm-3 col-form-label">Nama Barang</label>
+                <label for="item_id" class="col-sm-3 col-form-label">Kategori</label>
                 <div class="col-sm-9">
                   <select class="form-control select2" name="item_id" id="item_id">
                     <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -34,9 +32,9 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="stok_awal" class="col-sm-3 col-form-label">Stok Awal</label>
+                <label for="stok_awal" class="col-sm-3 col-form-label">Spesifikasi</label>
                 <div class="col-sm-9">
-                  <input type="number" class="form-control" name="stok_awal" id="stok_awal" placeholder="Pilih Barang ...." value="" readonly>
+                  <input type="number" class="form-control" name="stok_awal" id="stok_awal" placeholder="Pilih Barang ...." value="">
                 </div>
               </div>
               <div class="form-group row">
@@ -96,4 +94,5 @@ unset($__errorArgs, $__bag); ?>
     });
   </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/stok/mutasi/mutasi_create.blade.php ENDPATH**/ ?>

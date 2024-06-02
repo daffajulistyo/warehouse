@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Data Stok Material'); ?>
 
 <?php $__env->startSection('breadcrumb'); ?>
@@ -14,7 +12,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-9">
+      <div class="col-12">
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
@@ -107,8 +105,8 @@ unset($__errorArgs, $__bag); ?>
                 </div>
               </div>
               <div class="form-row">
-
-                <div class="col-4">
+                
+                <div class="col-12">
                   <div class="form-group">
                     <label for="harga_beli">Harga Beli</label>
                     <div class="input-group">
@@ -136,55 +134,7 @@ unset($__errorArgs, $__bag); ?>
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="form-group">
-                    <label for="harga_jual">Harga Jual</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas">Rp.</i></span>
-                      </div>
-                      <input type="text" class="form-control form-control-sm <?php $__errorArgs = ['harga_jual'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" id="harga_jual" name="harga_jual" placeholder="50000" value="<?php echo e($item->harga_jual); ?>">
-                      <?php $__errorArgs = ['harga_jual'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                        <div class="invalid-feedback"><?php echo e($message); ?></div>
-                      <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar Barang</label>
-                <input type="file" class="form-control-file <?php $__errorArgs = ['gambar'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" id="gambar" name="gambar">
-                <?php $__errorArgs = ['gambar'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                  <div class="invalid-feedback"><?php echo e($message); ?></div>
-                <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
+
               </div>
 
           </div>
@@ -198,15 +148,7 @@ unset($__errorArgs, $__bag); ?>
         </div>
         <!-- /.card -->
       </div>
-      <div class="col-3">
-        <div class="card">
 
-          <img class="card-img-top" id="gambar-preview" src="<?php echo e(url('/img/items_img/'.$item->gambar)); ?>" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Tinjauan Gambar Barang</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -232,4 +174,5 @@ unset($__errorArgs, $__bag); ?>
   })
 </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Development\wms\SIM Penjualan & Gudang\resources\views/stok/barang/barang_edit.blade.php ENDPATH**/ ?>

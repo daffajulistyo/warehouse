@@ -21,7 +21,7 @@
             <h3 class="card-title">Tambah Supplier</h3>
           </div>
           <div class="card-body">
-            <div class="col-7">
+            <div class="col-12">
               <form method="POST" action="{{ url('/suppliers') }}">
                 @csrf
                 <div class="form-group">
@@ -36,7 +36,46 @@
                     @enderror
                   </div>
                 </div>
-              
+                <div class="form-group">
+                    <label for="category_id">Kategori</label>
+                    <select name="category_id" id="category_id" class="select2 form-control form-control-sm @error('category_id') is-invalid @enderror">
+                      <option value="">Pilih Kategori Barang</option>
+                     <option value="">Pilihan 1</option>
+                     <option value="">Pilihan 2</option>
+                     <option value="">Pilihan 3</option>
+                    </select>
+                    @error('category_id')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                  </div>
+                <div class="form-group">
+                  <label for="nama">Spesifikasi</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-book"></i></span>
+                    </div>
+                  <input type="text" class="form-control form-control-sm @error('nama') is-invalid @enderror" id="nama" name="nama" placeholder="Spesifikasi..." value="{{ old('nama') }}">
+                    @error('nama')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="harga_beli">Harga Satuan</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas">Rp.</i></span>
+                          </div>
+                          <input type="text" class="form-control form-control-sm @error('harga_beli') is-invalid @enderror" id="harga_beli" name="harga_beli" placeholder="Masukkan Harga Satuan Barang" value="{{ old('harga_beli') }}">
+                          @error('harga_beli')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                          @enderror
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
           <!-- /.card-body -->

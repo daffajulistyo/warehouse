@@ -14,7 +14,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-9">
+      <div class="col-12">
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
@@ -66,41 +66,20 @@
                 </div>
               </div>
               <div class="form-row">
-                <div class="col-6">
+                <div class="col-12">
                   <div class="form-group">
-                    <label for="harga_beli">Harga Beli</label>
+                    <label for="harga_beli">Harga Satuan</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas">Rp.</i></span>
                       </div>
-                      <input type="text" class="form-control form-control-sm @error('harga_beli') is-invalid @enderror" id="harga_beli" name="harga_beli" placeholder="Masukkan Harga Beli Barang" value="{{ old('harga_beli') }}">
+                      <input type="text" class="form-control form-control-sm @error('harga_beli') is-invalid @enderror" id="harga_beli" name="harga_beli" placeholder="Masukkan Harga Satuan Barang" value="{{ old('harga_beli') }}">
                       @error('harga_beli')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="form-group">
-                    <label for="harga_jual">Harga Jual</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas">Rp.</i></span>
-                      </div>
-                      <input type="text" class="form-control form-control-sm @error('harga_jual') is-invalid @enderror" id="harga_jual" name="harga_jual" placeholder="Masukkan Harga Jual Barang" value="{{ old('harga_jual') }}">
-                      @error('harga_jual')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                      @enderror
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar Barang</label>
-                <input type="file" class="form-control-file @error('gambar') is-invalid @enderror" id="gambar" name="gambar">
-                @error('gambar')
-                  <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
               </div>
 
           </div>
@@ -114,14 +93,7 @@
         </div>
         <!-- /.card -->
       </div>
-      <div class="col-3">
-        <div class="card">
-          <img class="card-img-top" id="gambar-preview" src="https://via.placeholder.com/350?text=Preview+Gambar" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Tinjauan Gambar Barang</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
